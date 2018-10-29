@@ -106,9 +106,10 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
-  height: 50px;
+  height: 100%;
   background-color: #3397DB;
   align-items: center;
+  padding: 12px 0;
 }
 .filter-options h2 {
   color: white;
@@ -136,6 +137,8 @@ nav h1 a {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -153,7 +156,6 @@ nav h1 a {
   margin: 0;
   max-width: 100%;
   min-height: 248px;
-  min-width: 100%;
 }
 #restaurants-list li h1 {
   color: #f18200;
@@ -272,4 +274,40 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+/* Responsiveness for google nexus 5 */
+ @media only screen and (min-width: 360px){ 
+  table#restaurant-hours{
+    width: 55%;
+  }
+  #restaurant-address{
+    font-size: 7pt;
+  }
+  #reviews-list {
+    width: 55%;
+}
+.inside #footer {
+  width: 35%;
+}
+}
+/* Responsiveness for iPad */
+@media only screen and (min-width:768px){
+  ul#reviews-list{
+    width: 85%;
+  }
+  table#restaurant-hours {
+    width: 100%;
+}
+.inside #footer {
+  width: 42%;
+}
+}
+/* Responsiveness for desktop */
+@media only screen and (min-width:992px){
+  #reviews-list {
+    width: 90%;
+  }
+  .inside #footer{
+    width: 45%;
+  }
 }

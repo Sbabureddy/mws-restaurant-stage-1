@@ -162,6 +162,7 @@ createRestaurantHTML = (restaurant) => {
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
+  image.setAttribute("alt", "restaurant image")
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
@@ -178,6 +179,7 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.tabIndex='3';
   li.append(more)
 
   return li
@@ -209,3 +211,13 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+// service worker registration
+// Make sure sw are supported
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('sw.js')
+      .then(reg => console.log('Service Worker: Registered (Pages)'))
+      .catch(err => console.log(err));
+  });
+}
