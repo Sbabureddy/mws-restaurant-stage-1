@@ -277,18 +277,70 @@ nav h1 a {
 }
 /* Responsiveness for google nexus 5 */
  @media only screen and (min-width: 360px){ 
-  table#restaurant-hours{
+  /* #restaurant-cuisine{
+    display: inline-table;
+  }
+   #main-content{
+     display: flex;
+     flex-wrap: wrap;
+   }
+   #restaurant-img {
+    padding-right: 5px;
+    box-sizing: border-box;
+  }
+  #restaurant-cuisine{
+    letter-spacing: 6px;
+    width: 75%;
+  }
+   table#restaurant-hours{
     width: 55%;
   }
+  #restaurant-name{
+    font-size: 5pt;
+  }
   #restaurant-address{
-    font-size: 7pt;
+    font-size: 5pt;
   }
   #reviews-list {
     width: 55%;
 }
 .inside #footer {
   width: 35%;
+}  */
+/* #restaurant-container{
+  display: flex;
+  flex-wrap: wrap;
+} */
+#restaurant-name{
+  font-size: 15pt;
+  width: 50%;
+  padding-top: 33px;
 }
+#restaurant-img {
+  width: 76%;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+table#restaurant-hours{
+  width: 75%;
+}
+#restaurant-address{
+  width: 50%;
+}
+#restaurant-cuisine{
+  letter-spacing: 6px;
+  width: 75%;
+}
+
+#restaurant-reviews{
+  width: 50%;
+}
+#reviews-list {
+  width: 55%;
+}
+.inside #footer {
+  width: 35%;
+} 
 }
 /* Responsiveness for iPad */
 @media only screen and (min-width:768px){
